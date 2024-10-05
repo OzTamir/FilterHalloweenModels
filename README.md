@@ -1,6 +1,8 @@
-# Halloween Content Remover Chrome Extension
+<p align="center">
+  <img src="icon.png" alt="Halloween Content Remover Icon" width="128" height="128">
+</p>
 
-## Overview
+# Halloween Content Remover Chrome Extension
 
 This Chrome extension is designed to remove Halloween-related content from various 3D printing and maker community websites. It filters out articles, posts, and designs that contain Halloween-themed keywords, providing a cleaner browsing experience for users who prefer to avoid such content.
 
