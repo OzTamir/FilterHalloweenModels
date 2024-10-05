@@ -18,3 +18,45 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
   }
 });
+
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === "install") {
+    initializeDefaultWords();
+  }
+});
+
+// Function to initialize default words
+const initializeDefaultWords = () => {
+  const initialWordList = [
+    "halloween",
+    "pumpkin",
+    "ghost",
+    "witch",
+    "vampire",
+    "zombie",
+    "skeleton",
+    "bat",
+    "spider",
+    "candy",
+    "death",
+    "grave",
+    "haunted",
+    "horror",
+    "spooky",
+    "trick",
+    "treat",
+    "candy",
+    "death",
+    "spooky",
+  ];
+
+  chrome.storage.local.set(
+    {
+      halloweenWords: initialWordList,
+      firstTimeRun: true,
+    },
+    function () {
+      console.log("Default Halloween words initialized");
+    }
+  );
+};

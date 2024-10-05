@@ -67,24 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Function to initialize default words
-  const initializeDefaultWords = () => {
-    chrome.storage.local.get(["firstTimeRun"], function (result) {
-      if (!result.firstTimeRun) {
-        chrome.storage.local.set(
-          {
-            halloweenWords: initialWordList,
-            firstTimeRun: true,
-          },
-          function () {
-            console.log("Default Halloween words initialized");
-            loadWords();
-          }
-        );
-      }
-    });
-  };
-
   // Function to restore default words
   const restoreDefaultWords = () => {
     chrome.storage.local.set({ halloweenWords: initialWordList }, function () {
@@ -93,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  initializeDefaultWords();
   loadWords();
   addWordButton.addEventListener("click", addNewWord);
   newWordInput.addEventListener("keypress", (e) => {
