@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halloween Remover Settings</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #d32f2f;
+      }
+      #newWord {
+        display: flex;
+        margin-top: 20px;
+      }
+      #newWordInput {
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #addWord {
+        font-size: 1.5em;
+        background-color: #4caf50;
+      }
+      #addWord:hover {
+        background-color: #45a049;
+      }
+
+      #restoreDefault {
+        background-color: #f44336;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      #restoreDefault:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Halloween Remover Settings</h2>
+    <p>List of words to be removed:</p>
+    <ul id="wordList"></ul>
+    <div id="newWord">
+      <input type="text" id="newWordInput" placeholder="Add new word..." />
+      <button id="addWord">+</button>
+    </div>
+    <button id="restoreDefault">Restore default words</button>
+    <script src="settings.js"></script>
+  </body>
+</html>

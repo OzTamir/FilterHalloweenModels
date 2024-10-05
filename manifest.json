@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Filter Halloween Models",
+  "version": "1.0",
+  "description": "Removes Halloween-themed content from popular 3D printing and maker community websites for a cleaner browsing experience.",
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "*://*.printables.com/*",
+    "*://*.thingiverse.com/*",
+    "*://*.makerworld.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "settings.html",
+    "default_icon": {
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
