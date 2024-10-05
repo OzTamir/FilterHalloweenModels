@@ -8,7 +8,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     } else if (tab.url.includes("thingiverse.com")) {
       chrome.scripting.executeScript({
         target: { tabId: tabId },
-        files: ["halloweenRemovers/thingyverse.js"],
+        files: ["halloweenRemovers/thingiverse.js"],
       });
     } else if (tab.url.includes("makerworld.com")) {
       chrome.scripting.executeScript({
